@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app. route("/math")
+@app.route("/math")
 def math():
     return "1213131321313."
 
