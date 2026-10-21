@@ -10,5 +10,11 @@ def home():
 def math():
     return "1213131321313."
 
+
+@app.route("/html_tags")
+def html_tags():
+    return render_template("html_tags.html")
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001, debug=True)
