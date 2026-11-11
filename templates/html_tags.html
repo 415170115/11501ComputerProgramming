@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML 標籤總覽教學頁</title>
-<!--<link rel="stylesheet" href="index.css">-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+<!--<link rel="s tylesheet" href="index.css">-->
 </head>
 <body>
   <main>
+    {% extends "base.html" %}
+
+    {% block content %}
     <a href="/">回到首頁</a>
     <section id="text">
       <h2>1. 文字標籤</h2>
@@ -246,5 +250,6 @@
   <footer>
     <p>HTML 標籤總覽頁示範完成</p>
   </footer>
+    {% endblock %}
 </body>
 </html>
