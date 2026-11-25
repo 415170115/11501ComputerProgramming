@@ -9,3 +9,18 @@ services:
     environment:
       - FLASK_ENV=development
         
+  postgres: 
+    image: postgres:16
+    container_name: flask-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: flask_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    
+volumes:
+ postgres_data:
